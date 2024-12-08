@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 150vh; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+    margin: 0; /* Elimina el margen por defecto del body */
+  
+  }
+  main {
+    font-family: Arial, sans-serif;
+    padding: 50px;  /* Aumenta el espacio alrededor de todo el contenido */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    height: 150vh;
+  }
+    
+    .section_date {
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    .date-item {
+      margin-bottom: 20px;  /* Aumentar el espacio entre cada ítem de fecha */
+      font-size: 30px;  /* Ajusta el tamaño de la fuente para mejorar la legibilidad */
+      line-height: 1.8;  /* Aumentar la altura de la línea para dar más separación */
+      font-weight: bold;
+      text-align: center;
+  }
+    .fecha {
+      color: var(--white);
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow:  4px 4px 4px 4px black;
+      background-color: var(--blue0);
+    }
+    
+    .fecha p {
+      margin: 10px 0;
+      font-weight: bold;
+     
+    }
+  
+  
