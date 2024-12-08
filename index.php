@@ -36,11 +36,30 @@ define('BASE_URL', '/Proyectos/carteleria_sagaseta_official');
   </div>
 
   <main>
-    Espacio para el main del index
     <section class="section_date">
+        <div class="fecha">
+            <?php
+            // Llamar a la función getDates() que fue incluida en el archivo cx_database.php
+            require_once "src/db/cx_date.php";
 
+            $result = getDates();  // Llamada a la función getDates
+
+            // Verificar si tenemos resultados
+            if ($result && count($result) > 0) {
+                foreach ($result as $fecha) {
+                    // Mostrar cada evento con su fecha y descripción al lado
+                    echo "<div class='date-item'>";
+                    echo "<span class='descripcion'>" . htmlspecialchars($fecha['descripcion']) . "</span> : ";
+                    echo "<span class='fechas'>" . htmlspecialchars($fecha['fecha']) . "</span>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>No hay fechas disponibles.</p>";
+            }
+            ?>
+        </div>
     </section>
-  </main>
+</main>
 
   <footer class="footer_container">
     <div class="nav">
