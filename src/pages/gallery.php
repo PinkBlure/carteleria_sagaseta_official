@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/participate.css">
+  <link rel="stylesheet" href="../styles/gallery.css">
 </head>
 
 <body>
@@ -37,7 +38,25 @@
   </div>
 
   <main>
-    Espacio para el main del gallery
+  <ul class="carteles">
+      <?php
+// AQUÍ SE INYECTARÁN LOS CARTELES DESDE LA BD
+        require_once "../db/cx_gallery.php";
+        $resultados=getGallery();
+        if ($resultados && count($resultados) > 0) {
+          foreach ($resultados as $resultado) {
+            echo "<li class='cartel'>";
+            //SIGUEN SIN PODER VERSE LAS IMAGENES
+            echo "<img class='img' src='".base64_encode(htmlspecialchars($resultado['imagen'])) . "' alt='Imagen del Cartel'>";
+            echo "<p>Título: " . htmlspecialchars($resultado['titulo']) . "</p>";
+            echo "<a href='vote.php?id=".htmlspecialchars($resultado['id'])."'>Votar</a>";
+            echo "</li>";
+        }
+        }else{
+            echo "<p>No hay resultados disponibles.</p>";
+        }
+      ?>
+    </ul>
   </main>
 
   <footer class="footer_container">

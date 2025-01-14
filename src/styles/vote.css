@@ -1,6 +1,72 @@
 @import url('./base/base.css');
 @import url('./base/normalize.css');
-
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  } 
+  
+  .requirements h1 {
+    text-align: left;
+  }
+  
+  .requirements {
+    margin: 20px auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  .steps-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  
+  .step {
+    background-color: var(--blue3);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .description {
+    background-color: var(--white);
+    padding: 15px;
+    border: 2px solid var(--blue3);
+    border-radius: 8px;
+    font-size: 1.8rem;
+    color: var(--black);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  /* Ajustes para pantallas más grandes (>=768px) */
+  @media (min-width: 768px) {
+    main {
+      max-width: 1400px;
+      margin: auto;
+    }
+  
+    .requirements {
+      padding: 50px;
+      max-width: 1200px;
+    }
+  
+    .steps-container {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  
 .alert {
     background-color: var(--black);
     color: var(--white);

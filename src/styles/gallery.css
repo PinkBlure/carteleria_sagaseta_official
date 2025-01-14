@@ -1,2 +1,48 @@
 @import url('./base/base.css');
 @import url('./base/normalize.css');
+
+.carteles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin: 15px auto;
+    padding:20px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.cartel {
+    background-color: var(--blue3);
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    color: var(--black);
+    margin: 15px auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.img {
+    width: 70%;
+}
+
+@media (min-width: 768px) {
+    .carteles {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width: 991px) {
+    .carteles {
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
