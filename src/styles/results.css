@@ -1,233 +1,237 @@
 @import url('./base/base.css');
 @import url('./base/normalize.css');
 
-.main {
-    flex-grow: 1; 
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 4px 4px 4px rgba(92, 90, 90, 0.2);
-    height: 80%;
-    max-width: 80%;
-}
-
 /* Contenedor principal */
 .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: var(--blue1);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: var(--white);
-}
-
-/* Sección de "entrega-premios" */
-#entrega-premios {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--white, #ffffff);
-}
-
-#entrega-premios h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-=======
-/* Estilos globales */
-body {
-    display: flex;
-    flex-direction: column;
-    height: 180vh; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
-    margin: 0; /* Elimina el margen por defecto del body */
-    font-family: Arial, sans-serif; /* Asegura una fuente legible */
-}
-
-/* Estilo para el contenedor */
-.container {
-    max-width: 1200px;
+    max-width: 95%;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--blue0); /* Usamos el azul para el fondo del contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    color: white; /* Texto blanco por defecto dentro del contenedor */
+    min-height: 1115px;
 }
 
-#entrega-premios {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--white); /* Azul para el texto en el contenedor */
+.container h1 {
+    margin-left: 40px;
+    text-align: left;
+}
 
+/* Sección del cuadro azul */
+#entrega-premios {
+    background-color: var(--blue2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 94%;
+    margin-left: 30px;
 }
 
 #entrega-premios h2 {
-    font-size: 3rem; /* Título grande */
+    margin: 0;
+    font-size: 24px;
     color: var(--white);
 }
 
-#entrega-premios p {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--white);
-}
-
+#entrega-premios p,
 #entrega-premios h3 {
-    font-size: 3rem;
-    margin-top: 30px;
-    text-align: center;
-    color: var(--white, #ffffff);
+    font-size: 1.8rem;
+    color: var(--white);
+    margin: 10px 0 0;
 }
 
 /* Contenedor de resultados */
 .resultados {
     display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
-    margin-top: 30px;
-    min-height: 50vh;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 80px;
+    margin-top: 40px;
 }
 
-/* Carteles */
+/* Contenedor del podio */
+.podio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tarjetas de los ganadores */
 .top {
-    border: 2px solid #ddd;
-    padding: 10px;
     text-align: center;
-    width: 20%; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: var(--white, #ffffff);
+    padding: 5px;
+    gap: 10px;
+    background-color: var(--white);
+    border: 2px solid var(--blue2);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    height: 600px;
+    position: relative;
+    z-index: 2;
+    margin: 0 10px;
+}
+
+.top h4 {
+    font-size: 18px;
     color: var(--black);
-    transition: box-shadow 0.3s ease-in-out;
-    margin-top: 10px;
+    margin-bottom: 12px;
 }
 
-.top:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.cartel-imagen {
-    width: 100%; /* Asegura que la imagen no sea mayor que el contenedor */
-    height: auto;
-    max-width: 300px; /* Limita el tamaño máximo de la imagen */
+.top img.cartel-imagen {
+    width: 100%;
+    height: 50%;
     border-radius: 5px;
-    margin-bottom: 15px;
-    border: 1px solid var(--white);
+    margin-bottom: 20px;
+    background-color: var(--gray);
 }
 
-/* Títulos y textos */
-h4 {
-    margin: 10px 0;
-    font-size: 1.8rem;
+.top p {
+    margin: 5px 0;
+    font-size: 14px;
     color: var(--black);
 }
 
-.p {
-    margin: 5px 0;
-    font-size: 1.8rem;
-    color: var(--white);
+/* Base del podio */
+.podio-base {
+    width: 350px;
+    height: 30px;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+    margin-top: -10px;
+    position: relative;
 }
 
-.resultados h1 {
-    font-size: 1.8rem;
-    color: var(--white);
+.podio-base.gold {
+    background-color: gold;
+    margin-left: -410px;
+    margin-bottom: -6%;
+    transform: scaleX(1) scaleY(10.5);
+    transform-origin: center;
 }
 
-.resultados p {
-    color: var(--black);
-    font-size: 1.8rem;
-    margin: 5px 0;
-    padding-top: 20px;
+.podio-base.silver {
+    background-color: silver;
+    margin-left: -410px;
+    margin-bottom: -7%;
+    transform: scaleX(1) scaleY(9.5);
+    transform-origin: center;
 }
 
-/* Ajuste de responsividad */
-@media (max-width: 768px) {
-    .resultados {
-        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
-        align-items: center;
+.podio-base.bronze {
+    background-color: #cd7f32;
+    margin-left: -410px;
+    margin-bottom: -8%;
+    transform: scaleX(1) scaleY(8.5);
+    transform-origin: center;
+}
+
+.resultados > .top:nth-child(1) {
+    transform: translateY(-15px);
+}
+
+.resultados > .top:nth-child(3) {
+    transform: translateY(20px);
+}
+
+.resultados > .top:nth-child(5) {
+    transform: translateY(50px);
+}
+
+/* Para pantallas con resolución de iPad Mini (768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
     }
 
     .top {
-        width: 80%; /* Los carteles ocupan más espacio en pantallas pequeñas */
-        margin: 10px 0; /* Espaciado entre los carteles */
+        width: 40%; /* Las tarjetas se expanden más */
+        height: auto; /* Ajusta la altura para un tamaño más dinámico */
     }
 
-    .cartel-imagen {
-        max-width: 100%; /* La imagen se ajusta completamente al ancho del contenedor */
+    .top img.cartel-imagen {
+        height: 60%; /* Imagen más grande */
     }
 
-    .main {
-        height: auto;
+    .podio-base {
+        width: 300px;
+        height: 25px;
     }
-}
-    font-size: 2.5rem;
-    color: var(--white);
-}
 
-h3 {
-    font-size: 2.5rem;
-    margin-top: 30px;
-    text-align: center;
-    color: var(--white);
-}
+    .podio-base.gold {
+        transform: scaleX(1) scaleY(7) translateY(3px);
+        margin-left: -240px;
+    }
 
-/* Contenedor de los resultados */
-.resultados {
-    display: flex;               /* Utilizamos flexbox para alinear los elementos */
-    justify-content: space-between; /* Espacio igual entre los elementos */
-    gap: 20px;                    /* Espacio entre los carteles */
-    flex-wrap: wrap;              /* Asegura que se ajusten correctamente en pantallas más pequeñas */
-    margin-top: 30px;
-}
+    .podio-base.silver {
+        transform: scaleX(1) scaleY(6.5) translateY(3px);
+        margin-left: -250px;
+    }
 
-/* Estilo para cada cartel */
-.top {
-    border: 2px solid #ddd;
-    padding: 50px;
-    text-align: center;
-    width: 30%;                   /* Asignamos un 30% de ancho para que los 3 elementos quepan en una línea */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: var(--white, #ffffff); /* Fondo blanco para los carteles */
-    color: #333; /* Color negro para el texto */
-    transition: box-shadow 0.3s ease-in-out;
-    margin-top: 50px;
-}
+    .podio-base.bronze {
+        transform: scaleX(1) scaleY(6) translateY(3px);
+        margin-left: -240px;
+    }
 
-.top:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* Efecto hover para interacción */
-}
-
-.cartel-imagen {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd; /* Borde suave en las imágenes */
-}
-
-/* Estilos para los títulos y el texto dentro de los cuadros */
-h4 {
-    margin: 10px 0;
-    font-size: 2.1rem;
-    color: #333; /* Títulos en negro */
-}
-
-p {
-    margin: 5px 0;
-    font-size: 2.1rem;
-    color: #333; /* Párrafos dentro de los cuadros en negro */
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
     .resultados {
-        flex-direction: column;    /* En pantallas pequeñas, los resultados se apilan verticalmente */
-        align-items: center;       /* Centramos los carteles */
+        gap: 50px; /* Ajuste del espacio entre tarjetas */
+    }
+
+    /* Ajustes del texto */
+    #entrega-premios h2 {
+        font-size: 1.8rem;
+    }
+
+    #entrega-premios p,
+    #entrega-premios h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        margin-bottom: 50px;
+    }
+
+    .container h1 {
+        font-size: 1.2rem; /* Texto aún más pequeño */
+    }
+
+    #entrega-premios h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    }
+
+    #entrega-premios p,
+    #entrega-premios h3 {
+        font-size: 1.2rem;
     }
 
     .top {
-        width: 80%;                /* Los carteles ocupan más espacio en pantallas pequeñas */
+        width: 100%; /* Tarjetas ocupan todo el ancho */
+        margin: 10px 0;
+    }
+
+    .resultados {
+        flex-direction: column; /* Las tarjetas se colocan verticalmente */
+        gap: 10px; /* Menor espacio entre elementos */
+    }
+
+    /* Base del podio ajustada */
+    .podio-base {
+        width: 240px; /* Aumento el ancho */
+        height: 20px; /* Aumento la altura */
+    }
+
+    .podio-base.gold {
+        transform: scaleX(1.8) scaleY(4) translateY(-8px); /* Ajuste ligero para la base de oro */
+        margin-right: 80px;
+    }
+
+    .podio-base.silver {
+        transform: scaleX(1.8) scaleY(3) translateY(1px); /* Ajuste para la base de plata */
+        margin-right: 80px;
+    }
+
+    .podio-base.bronze {
+        transform: scaleX(1.8) scaleY(3) translateY(10px); /* Ajuste para la base de bronce */
+        margin-right: 80px;
     }
 }
-
