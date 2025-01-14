@@ -23,7 +23,7 @@
   <div>
 
     <header class="header_container">
-      <a href="../../index.php" class="logo_sagaseta_container"><img src="src/img/logo_sagaseta.svg" alt="logo" class="logo_sagaseta"></a>
+      <a href="../../index.php" class="logo_sagaseta_container"><img src="../img/logo_sagaseta.svg" alt="logo" class="logo_sagaseta"></a>
       <h1 class="header_title">Concurso día de Canarias</h1>
     </header>
 
@@ -46,7 +46,7 @@
         <div class="description">Cada alumno SÓLO puede votar un único cartel</div>
         <!-- Paso 3 -->
         <div class="step">Requisito 3</div>
-        <div class="description">Se permite cualquier técnica, siempre que el diseño final esté en formato digital.</div>
+        <div class="description">Es necesario tener CIAL y PIN</div>
         <!-- Paso 4 -->
         <div class="step">Requisito 4</div>
         <div class="description">El cartel debe presentarse en formato vertical y en tamaño DIN A3 (3508 x 4961 píxeles). Subido en formato PDF.</div>
