@@ -5,12 +5,11 @@
 .container {
     max-width: 95%;
     margin: 0 auto;
-    padding: 20px;
-    min-height: 1115px;
+    min-height: 100%;
 }
 
 .container h1 {
-    margin-left: 40px;
+    margin-left: 20px;
     text-align: left;
 }
 
@@ -20,8 +19,8 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 94%;
-    margin-left: 30px;
+    width: 98%;
+    margin: 20px auto;
 }
 
 #entrega-premios h2 {
@@ -40,178 +39,119 @@
 /* Contenedor de resultados */
 .resultados {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
-    gap: 80px;
     margin-top: 40px;
-}
-
-/* Contenedor del podio */
-.podio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+    position: relative;
 }
 
 /* Tarjetas de los ganadores */
 .top {
     text-align: center;
-    padding: 5px;
-    gap: 10px;
+    padding: 10px;
     background-color: var(--white);
     border: 2px solid var(--blue2);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    height: 600px;
+    width: 30%;
     position: relative;
     z-index: 2;
-    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px;
 }
 
 .top h4 {
-    font-size: 18px;
+    font-size: 1.5rem;
     color: var(--black);
     margin-bottom: 12px;
 }
 
 .top img.cartel-imagen {
-    width: 100%;
-    height: 50%;
+    width: 80%;
+    height: auto;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: var(--gray);
 }
 
 .top p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--black);
 }
 
 /* Base del podio */
 .podio-base {
-    width: 350px;
+    width: 32%;
     height: 30px;
-    z-index: 1;
     border-radius: 0 0 10px 10px;
-    margin-top: -10px;
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 
+/* Oro */
 .podio-base.gold {
     background-color: gold;
-    margin-left: -410px;
-    margin-bottom: -6%;
-    transform: scaleX(1) scaleY(10.5);
-    transform-origin: center;
+    height: 130px;
+    transform: translateX(-105%);
 }
 
+/* Plata */
 .podio-base.silver {
     background-color: silver;
-    margin-left: -410px;
-    margin-bottom: -7%;
-    transform: scaleX(1) scaleY(9.5);
-    transform-origin: center;
+    height: 100px;
+    transform: translateX(0%);
 }
 
+/* Bronce */
 .podio-base.bronze {
     background-color: #cd7f32;
-    margin-left: -410px;
-    margin-bottom: -8%;
-    transform: scaleX(1) scaleY(8.5);
-    transform-origin: center;
+    height: 70px;
+    transform: translateX(105%);
 }
 
+/* Posicionamiento para las tarjetas */
 .resultados > .top:nth-child(1) {
-    transform: translateY(-15px);
+    transform: translateY(-70px);
+}
+
+.resultados > .top:nth-child(2) {
+    transform: translateY(-50px);
 }
 
 .resultados > .top:nth-child(3) {
-    transform: translateY(20px);
+    transform: translateY(-30px);
 }
 
-.resultados > .top:nth-child(5) {
-    transform: translateY(50px);
-}
 
-/* Para pantallas con resolución de iPad Mini (768px) */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .top {
-        width: 40%; /* Las tarjetas se expanden más */
-        height: auto; /* Ajusta la altura para un tamaño más dinámico */
-    }
-
-    .top img.cartel-imagen {
-        height: 60%; /* Imagen más grande */
-    }
-
-    .podio-base {
-        width: 300px;
-        height: 25px;
-    }
-
-    .podio-base.gold {
-        transform: scaleX(1) scaleY(7) translateY(3px);
-        margin-left: -240px;
-    }
-
-    .podio-base.silver {
-        transform: scaleX(1) scaleY(6.5) translateY(3px);
-        margin-left: -250px;
-    }
-
-    .podio-base.bronze {
-        transform: scaleX(1) scaleY(6) translateY(3px);
-        margin-left: -240px;
-    }
-
-    .resultados {
-        gap: 50px; /* Ajuste del espacio entre tarjetas */
-    }
-
-    /* Ajustes del texto */
-    #entrega-premios h2 {
-        font-size: 1.8rem;
-    }
-
-    #entrega-premios p,
-    #entrega-premios h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Para pantallas muy pequeñas (menos de 480px) */
+/* Responsivo para móviles pequeños (480px) */
 @media screen and (max-width: 480px) {
-    .container {
-        margin-bottom: 50px;
-    }
-
     .container h1 {
-        font-size: 1.2rem; /* Texto aún más pequeño */
+        font-size: 1.8rem; /* Texto aún más pequeño */
     }
 
     #entrega-premios h2 {
-        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+        font-size: 1.8rem; /* Ajusta el tamaño del texto */
     }
 
     #entrega-premios p,
     #entrega-premios h3 {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .top {
         width: 100%; /* Tarjetas ocupan todo el ancho */
-        margin: 10px 0;
+        margin-top: 50px;
     }
 
     .resultados {
         flex-direction: column; /* Las tarjetas se colocan verticalmente */
-        gap: 10px; /* Menor espacio entre elementos */
+        gap: 20px; /* Menor espacio entre elementos */
     }
 
     /* Base del podio ajustada */
@@ -221,17 +161,20 @@
     }
 
     .podio-base.gold {
-        transform: scaleX(1.8) scaleY(4) translateY(-8px); /* Ajuste ligero para la base de oro */
-        margin-right: 80px;
+        transform: scaleX(1.9) scaleY(0.75) translateY(-1700px); /* Ajuste ligero para la base de oro */
+        margin-right: 85px;
+        
     }
 
     .podio-base.silver {
-        transform: scaleX(1.8) scaleY(3) translateY(1px); /* Ajuste para la base de plata */
-        margin-right: 80px;
+        transform: scaleX(1.9) scaleY(0.75) translateY(-850px); /* Ajuste ligero para la base de plata */
+        margin-right: 85px;
+        
     }
 
     .podio-base.bronze {
-        transform: scaleX(1.8) scaleY(3) translateY(10px); /* Ajuste para la base de bronce */
-        margin-right: 80px;
+        transform: scaleX(1.9) scaleY(0.75) ; /* Ajuste ligero para la base de bronce */
+        margin-right: 85px;
+        
     }
 }

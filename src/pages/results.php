@@ -58,11 +58,6 @@ define('BASE_URL', '/Proyectos/carteleria_sagaseta_official');
           // Recorrer los resultados y mostrarlos
           $top = 1;
           foreach ($resultados as $resultado) {
-            $podioClass = '';
-            if ($top == 1) $podioClass = 'gold';
-            elseif ($top == 2) $podioClass = 'silver';
-            elseif ($top == 3) $podioClass = 'bronze';
-
             echo "<div class='top'>";
             echo "<h4>TOP " . $top++ . "</h4>";
 
@@ -81,8 +76,10 @@ define('BASE_URL', '/Proyectos/carteleria_sagaseta_official');
             echo "<p><strong>Curso:</strong> " . htmlspecialchars($resultado['curso']) . "</p>";
             echo "<p><strong>Título:</strong> " . htmlspecialchars($resultado['titulo']) . "</p>";
             echo "</div>";
-            echo "<div class='podio-base " . $podioClass . "'></div>";
           }
+          echo "<div class='podio-base gold'></div>";
+          echo "<div class='podio-base silver'></div>";
+          echo "<div class='podio-base bronze'></div>";
         } else {
           echo "<p>No hay resultados disponibles.</p>";
         }
