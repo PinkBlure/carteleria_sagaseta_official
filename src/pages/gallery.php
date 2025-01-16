@@ -49,7 +49,7 @@
             //SIGUEN SIN PODER VERSE LAS IMAGENES
             echo "<img class='img' src='".base64_encode(htmlspecialchars($resultado['imagen'])) . "' alt='Imagen del Cartel'>";
             echo "<p>Título: " . htmlspecialchars($resultado['titulo']) . "</p>";
-            echo "<a href='vote.php?id=".htmlspecialchars($resultado['id'])."'>Votar</a>";
+            echo "<a class='boton' href='vote.php?id=".htmlspecialchars($resultado['id'])."'>Votar</a>";
             echo "</li>";
         }
         }else{

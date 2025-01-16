@@ -40,22 +40,13 @@
       <div class="steps-container">
         <!-- Paso 1 -->
         <div class="step">Requisito 1</div>
-        <div class="description">Debes ser alumno del centro</div>
+        <div class="description">Sólo se admite un <strong>ÚNICO</strong> voto por persona</div>
         <!-- Paso 2 -->
         <div class="step">Requisito 2</div>
-        <div class="description">Cada alumno SÓLO puede votar un único cartel</div>
+        <div class="description">Es necesario tener <strong>CIAL Y PIN</strong></div>
         <!-- Paso 3 -->
         <div class="step">Requisito 3</div>
-        <div class="description">Es necesario tener CIAL y PIN</div>
-        <!-- Paso 4 -->
-        <div class="step">Requisito 4</div>
-        <div class="description">El cartel debe presentarse en formato vertical y en tamaño DIN A3 (3508 x 4961 píxeles). Subido en formato PDF.</div>
-        <!-- Paso 5 -->
-        <div class="step">Requisito 5</div>
-        <div class="description">Cualquier diseño que incluya contenido inapropiado o contrario a los valores de respeto y convivencia será descalificado.</div>
-        <!-- Paso 6 -->
-        <div class="step">Requisito 6</div>
-        <div class="description">Al participar, los autores ceden los derechos de uso y reproducción de sus diseños al centro educativo para posibles exposiciones y publicaciones.</div>
+        <div class="description">Una vez emitido el voto, <strong>NO SE PODRÁ MODIFICAR</strong></div>
       </div>
     </section>
   </main>

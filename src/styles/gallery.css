@@ -1,21 +1,19 @@
 @import url('./base/base.css');
 @import url('./base/normalize.css');
 
+
 .carteles {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    margin: 15px auto;
-    padding:20px;
+    gap: 15px;
+    padding:50px;
     text-align: center;
     margin: 20px auto;
-    padding: 20px;
-    width: 100%;
 }
 
 .cartel {
     background-color: var(--blue3);
-    padding: 15px 20px;
+    padding: 15px 30px;
     text-align: center;
     border: 1px solid #ccc;
     list-style: none;
@@ -32,17 +30,34 @@
     width: 70%;
 }
 
+.boton{
+    background-color: var(--white);
+    padding: 10px 20px;
+    /* border: 2px solid var(--blue3);  lo quité porque queda feo con el color de fondo del padre*/
+    border-radius: 8px;
+    font-size: 1.8rem;
+    color: var(--black);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    text-align:center;
+    line-height: 1.5;
+    display: inline-block;
+    text-decoration: none; 
+    transition: background-color 0.2s ease;
+    font-weight: normal;
+}
+
+.boton:hover {
+    background-color: var(--blue5); /* Color de fondo cuando el mouse pasa por encima */
+  }
+
 @media (min-width: 768px) {
     .carteles {
         grid-template-columns: repeat(2, 1fr);
-        padding: 50px;
-        margin: 20px auto;
     }
 }
 
 @media (min-width: 991px) {
     .carteles {
         grid-template-columns: repeat(3, 1fr);
-        
     }
 }

@@ -46,7 +46,7 @@ main {
     font-size: 1.8rem;
     color: var(--black);
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    text-align:center;
     line-height: 1.5;
   }
   
