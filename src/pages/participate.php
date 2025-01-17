@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/participate.css">
 </head>
-
+<!--  -->
 <body>
-  
+
   <section class="alert">
     <?php
-      require "../components/component_alert.php";
+    require "../components/component_alert.php";
     ?>
   </section>
 
@@ -34,9 +34,34 @@
     </div>
   </div>
 
-  <main>
-    Espacio para el main del participate
-  </main>
+
+  <main class="formulario-centro">
+    <div class="caja_participacion">
+        <form action="cx_participation.php" method="POST" enctype="multipart/form-data">
+            <h2>Formulario de Participación</h2>
+            <label for="cial">CIAL del Usuario:</label>
+            <input type="text" name="cial" id="cial" maxlength="20" required>
+
+            <label for="pin">PIN del Usuario:</label>
+            <input type="password" name="pin" id="pin" maxlength="4" required>
+
+            <label for="titulo">Nombre del Cartel:</label>
+            <input type="text" name="titulo" id="titulo" maxlength="100" required>
+
+            <label for="descripcion">Descripción del cartel:</label>
+            <input type="text" name="descripcion" id="descripcion" maxlength="100" required>
+
+            <label for="imagen">Selecciona la Imagen del Cartel:</label>
+            <input type="file" name="imagen" id="imagen" accept="image/*" required>
+            
+            <button class="button" type="submit">Subir Cartel</button>
+        </form>
+    </div>
+    <div class="reglas"><h1>hola</h1></div>
+    
+</main>
+
+
 
   <footer class="footer_container">
     <div class="nav">
