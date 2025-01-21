@@ -66,7 +66,7 @@
 }
 
 .top h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--black);
     margin-bottom: 12px;
 }
@@ -132,11 +132,11 @@
 /* Responsivo para móviles pequeños (480px) */
 @media screen and (max-width: 480px) {
     .container h1 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem; /* Texto aún más pequeño */
     }
 
     #entrega-premios h2 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem; /* Ajusta el tamaño del texto */
     }
 
     #entrega-premios p,
@@ -145,35 +145,35 @@
     }
 
     .top {
-        width: 100%; 
+        width: 100%; /* Tarjetas ocupan todo el ancho */
         margin-top: 50px;
     }
 
     .resultados {
         flex-direction: column; /* Las tarjetas se colocan verticalmente */
-        gap: 20px; 
+        gap: 20px; /* Menor espacio entre elementos */
     }
 
     /* Base del podio ajustada */
     .podio-base {
-        width: 240px; 
-        height: 20px;
+        width: 240px; /* Aumento el ancho */
+        height: 20px; /* Aumento la altura */
     }
 
     .podio-base.gold {
-        transform: scaleX(1.9) scaleY(0.75) translateY(-1900px); 
+        transform: scaleX(1.9) scaleY(0.75) translateY(-1900px); /* Ajuste ligero para la base de oro */
         margin-right: 85px;
         
     }
 
     .podio-base.silver {
-        transform: scaleX(1.9) scaleY(0.75) translateY(-950px); 
+        transform: scaleX(1.9) scaleY(0.75) translateY(-950px); /* Ajuste ligero para la base de plata */
         margin-right: 85px;
         
     }
 
     .podio-base.bronze {
-        transform: scaleX(1.9) scaleY(0.75) ; 
+        transform: scaleX(1.9) scaleY(0.75) ; /* Ajuste ligero para la base de bronce */
         margin-right: 85px;
         
     }
