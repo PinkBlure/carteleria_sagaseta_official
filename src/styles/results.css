@@ -15,7 +15,7 @@
 
 /* Sección del cuadro azul */
 #entrega-premios {
-    background-color: var(--blue2);
+    background-color: var(--blue3);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -26,13 +26,13 @@
 #entrega-premios h2 {
     margin: 0;
     font-size: 24px;
-    color: var(--white);
+    color: var(--black);
 }
 
 #entrega-premios p,
 #entrega-premios h3 {
     font-size: 1.8rem;
-    color: var(--white);
+    color: var(--black);
     margin: 10px 0 0;
 }
 
@@ -81,7 +81,7 @@
 
 .top p {
     margin: 5px 0;
-    font-size: 1rem;
+    font-size: 1.8rem;
     color: var(--black);
 }
 
@@ -132,11 +132,11 @@
 /* Responsivo para móviles pequeños (480px) */
 @media screen and (max-width: 480px) {
     .container h1 {
-        font-size: 1.8rem; /* Texto aún más pequeño */
+        font-size: 1.8rem; 
     }
 
     #entrega-premios h2 {
-        font-size: 1.8rem; /* Ajusta el tamaño del texto */
+        font-size: 1.8rem; 
     }
 
     #entrega-premios p,
@@ -145,35 +145,35 @@
     }
 
     .top {
-        width: 100%; /* Tarjetas ocupan todo el ancho */
+        width: 100%; 
         margin-top: 50px;
     }
 
     .resultados {
         flex-direction: column; /* Las tarjetas se colocan verticalmente */
-        gap: 20px; /* Menor espacio entre elementos */
+        gap: 20px; 
     }
 
     /* Base del podio ajustada */
     .podio-base {
-        width: 240px; /* Aumento el ancho */
-        height: 20px; /* Aumento la altura */
+        width: 240px; 
+        height: 20px;
     }
 
     .podio-base.gold {
-        transform: scaleX(1.9) scaleY(0.75) translateY(-1700px); /* Ajuste ligero para la base de oro */
+        transform: scaleX(1.9) scaleY(0.75) translateY(-1900px); 
         margin-right: 85px;
         
     }
 
     .podio-base.silver {
-        transform: scaleX(1.9) scaleY(0.75) translateY(-850px); /* Ajuste ligero para la base de plata */
+        transform: scaleX(1.9) scaleY(0.75) translateY(-950px); 
         margin-right: 85px;
         
     }
 
     .podio-base.bronze {
-        transform: scaleX(1.9) scaleY(0.75) ; /* Ajuste ligero para la base de bronce */
+        transform: scaleX(1.9) scaleY(0.75) ; 
         margin-right: 85px;
         
     }
